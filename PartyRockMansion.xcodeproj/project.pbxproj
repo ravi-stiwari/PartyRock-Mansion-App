@@ -55,13 +55,21 @@
 			isa = PBXGroup;
 			children = (
 				78F1E1FF1E6DFA010001534D /* AppDelegate.swift */,
-				78F1E2011E6DFA010001534D /* ViewController.swift */,
+				78F1E2111E6DFA260001534D /* Controller */,
 				78F1E2031E6DFA010001534D /* Main.storyboard */,
 				78F1E2061E6DFA010001534D /* Assets.xcassets */,
 				78F1E2081E6DFA010001534D /* LaunchScreen.storyboard */,
 				78F1E20B1E6DFA010001534D /* Info.plist */,
 			);
 			path = PartyRockMansion;
+			sourceTree = "<group>";
+		};
+		78F1E2111E6DFA260001534D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				78F1E2011E6DFA010001534D /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
