@@ -71,11 +71,11 @@
                                     <constraint firstItem="ISN-eb-9qp" firstAttribute="centerY" secondItem="ceI-j8-fiC" secondAttribute="centerY" id="tMg-k3-evO"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="partyCell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rQn-K3-qW2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rQn-K3-qW2">
                                 <rect key="frame" x="0.0" y="221" width="320" height="347"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="83" id="8iX-AQ-2Xn" customClass="PartyCell" customModule="PartyRockMansion" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PartyCell" rowHeight="83" id="8iX-AQ-2Xn" customClass="PartyCell" customModule="PartyRockMansion" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8iX-AQ-2Xn" id="Bl7-NJ-gpp">
@@ -90,13 +90,12 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where the Sun goes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9w-GU-v5e">
-                                                    <rect key="frame" x="90" y="18" width="212" height="32"/>
+                                                    <rect key="frame" x="90" y="18" width="212" height="31.5"/>
                                                     <fontDescription key="fontDescription" name="SpitShine" family="Spit Shine" pointSize="28"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.1936216775622274" green="0.89459073604060912" blue="0.70744975348148431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="7pZ-et-X3t" secondAttribute="bottom" constant="8" id="7pT-IJ-nLZ"/>
                                                 <constraint firstItem="7pZ-et-X3t" firstAttribute="top" secondItem="Bl7-NJ-gpp" secondAttribute="top" constant="8" id="FSZ-yg-lM4"/>
@@ -130,12 +129,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="rQn-K3-qW2" id="jPi-Mv-yWV"/>
                         <segue destination="5Io-LD-ru3" kind="showDetail" identifier="VideoVC" id="9nN-Ib-CHM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="124"/>
+            <point key="canvasLocation" x="103" y="-180"/>
         </scene>
         <!--VideoVC-->
         <scene sceneID="llH-Lk-Sjc">
@@ -153,21 +153,34 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="0Ud-BS-ZTp"/>
+                                    <constraint firstAttribute="height" constant="200" id="qcz-z4-rH6"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VideoTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUN-qL-zeF">
+                                <rect key="frame" x="36" y="300" width="248" height="28"/>
+                                <fontDescription key="fontDescription" name="SpitShine" family="Spit Shine" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.97961611675126903" green="0.42567369529879279" blue="0.4087615447503456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="M2B-Yb-zN1" secondAttribute="trailing" id="vtz-Hb-rDO"/>
-                            <constraint firstItem="M2B-Yb-zN1" firstAttribute="top" secondItem="a9W-SG-33y" secondAttribute="top" id="yEy-H4-uLr"/>
-                            <constraint firstItem="M2B-Yb-zN1" firstAttribute="leading" secondItem="a9W-SG-33y" secondAttribute="leading" id="ywH-3P-4Ng"/>
+                            <constraint firstItem="M2B-Yb-zN1" firstAttribute="top" secondItem="a9W-SG-33y" secondAttribute="top" id="eSN-4K-7Yb"/>
+                            <constraint firstItem="BUN-qL-zeF" firstAttribute="leading" secondItem="a9W-SG-33y" secondAttribute="leadingMargin" constant="20" id="fHF-fS-jhe"/>
+                            <constraint firstItem="M2B-Yb-zN1" firstAttribute="leading" secondItem="a9W-SG-33y" secondAttribute="leading" id="hYL-zf-1C7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BUN-qL-zeF" secondAttribute="trailing" constant="20" id="lQc-5z-ywq"/>
+                            <constraint firstItem="BUN-qL-zeF" firstAttribute="top" secondItem="M2B-Yb-zN1" secondAttribute="top" constant="300" id="nrV-GZ-LOj"/>
+                            <constraint firstAttribute="trailing" secondItem="M2B-Yb-zN1" secondAttribute="trailing" id="ylr-ig-wgD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="videoTitleLabel" destination="BUN-qL-zeF" id="u9t-yi-vEe"/>
+                        <outlet property="webView" destination="M2B-Yb-zN1" id="ynx-UB-QkJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APJ-po-GgH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170" y="123.59154929577466"/>
+            <point key="canvasLocation" x="829" y="-181"/>
         </scene>
     </scenes>
     <resources>

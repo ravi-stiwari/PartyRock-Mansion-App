@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		787C01991E6F2A1400273476 /* PartyRock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787C01981E6F2A1400273476 /* PartyRock.swift */; };
 		78F1E2001E6DFA010001534D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1E1FF1E6DFA010001534D /* AppDelegate.swift */; };
 		78F1E2021E6DFA010001534D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F1E2011E6DFA010001534D /* MainVC.swift */; };
 		78F1E2051E6DFA010001534D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78F1E2031E6DFA010001534D /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		787C01981E6F2A1400273476 /* PartyRock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyRock.swift; sourceTree = "<group>"; };
 		78F1E1FC1E6DFA010001534D /* PartyRockMansion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyRockMansion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F1E1FF1E6DFA010001534D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78F1E2011E6DFA010001534D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 		78F1E2131E6DFAF50001534D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				787C01981E6F2A1400273476 /* PartyRock.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			files = (
 				78F1E2181E6DFF140001534D /* VideoVC.swift in Sources */,
 				78F1E2021E6DFA010001534D /* MainVC.swift in Sources */,
+				787C01991E6F2A1400273476 /* PartyRock.swift in Sources */,
 				78F1E21C1E6E00FC0001534D /* PartyCell.swift in Sources */,
 				78F1E2001E6DFA010001534D /* AppDelegate.swift in Sources */,
 			);
@@ -346,6 +350,7 @@
 				78F1E2101E6DFA010001534D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
